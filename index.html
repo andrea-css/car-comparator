@@ -28,12 +28,12 @@
 <body>
     <!--HEROBANNER-->
     <div class="hero-image container-fluid">
-    <div class="row">
-        <div class="col-12 col-md-6 hero-text mx-auto">
-            <p>Più di 155 Veicoli da comparare</p>
-            <h1 style="font-size:50px">Qual'è il più adatto a te ?</h1>
+        <div class="row">
+            <div class="col-12 col-md-6 hero-text mx-auto">
+                <p>Più di 155 Veicoli da comparare</p>
+                <h1 style="font-size:50px">Qual'è il più adatto a te ?</h1>
+            </div>
         </div>
-    </div>
         <div class="row">
             <section id="section10" class="demo justify-content-centermx-auto">
                 <a href="#contenuto">
@@ -44,43 +44,64 @@
 
     <!--CONTAINER-->
     <div class="container-fluid contenuto" id="contenuto">
-    <div class="row">
-        <h2 class="mx-auto margin_txt">Come Funziona ?</h2>
-    </div>
-    <div class="row">
-        <p class="text-center margin_txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae quo aliquid id molestias provident quia architecto ullam pariatur, fuga libero a quasi cumque dignissimos adipisci totam soluta minus incidunt in?</p>
-    </div>
-        <div class="row align-items-center herotxt">
-            <div class="input-group mb-3 col-6 btn_grp_style" id="primary-selection">
-                <div class="input-group-prepend">
-                    <button class="btn btn-outline-secondary dropdown-toggle btn-secondary btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Countries</button>
-                    <div class="dropdown-menu countries-menu selector-style hidediv"></div>
+        <div class="row">
+            <h2 class="mx-auto margin_txt">Come Funziona ?</h2>
+        </div>
+        <div class="row">
+            <p class="text-center margin_txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae quo aliquid id molestias provident quia architecto
+                ullam pariatur, fuga libero a quasi cumque dignissimos adipisci totam soluta minus incidunt in?</p>
+        </div>
+        <div class="row align-items-center">
+
+            <div class="col-6 text-center">
+
+                <div class="btn-group" role="group" id="primary-selection">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Countries
+                        </button>
+                        <div class="dropdown-menu countries-menu"></div>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Makes
+                        </button>
+                        <div class="dropdown-menu makes-menu"></div>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Models
+                        </button>
+                        <div class="dropdown-menu models-menu"></div>
+                    </div>
                 </div>
-                <div class="input-group-prepend">
-                    <button class="btn btn-outline-secondary dropdown-toggle btn-secondary btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Makes</button>
-                    <div class="dropdown-menu makes-menu selector-style"></div>
-                </div>
-                <div class="input-group-prepend">
-                    <button class="btn btn-outline-secondary dropdown-toggle btn-secondary btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Model</button>
-                    <div class="dropdown-menu makes-id selector-style hidediv"></div>
-                </div>
+
             </div>
 
-            <div class="input-group mb-3 col-6 btn_grp_style" id="secondary-selection">
-                <div class="input-group-prepend">
-                    <button class="btn btn-outline-secondary dropdown-toggle btn-secondary btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Countries</button>
-                    <div class="dropdown-menu countries-menu selector-style"></div>
-                </div>
-                <div class="input-group-prepend">
-                    <button class="btn btn-outline-secondary dropdown-toggle btn-secondary btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Makes</button>
-                    <div class="dropdown-menu makes-menu selector-style"></div>
-                </div>
-                <div class="input-group-prepend">
-                    <button class="btn btn-outline-secondary dropdown-toggle btn-secondary btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Model</button>
-                    <div class="dropdown-menu makes-id selector-style"></div>
-                </div>
-            </div>
+            <div class="col-6 text-center">
 
+                <div class="btn-group" role="group" id="secondary-selection">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Countries
+                        </button>
+                        <div class="dropdown-menu countries-menu"></div>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Makes
+                        </button>
+                        <div class="dropdown-menu makes-menu"></div>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Models
+                        </button>
+                        <div class="dropdown-menu models-menu"></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </body>
