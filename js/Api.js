@@ -15,9 +15,11 @@ function gotModel(data, idSelection) {
     $("#" + idSelection).parent().find(".model-container").text(model.model_name + " by " + model.make_display + " (" + model.make_country + ")")
 }
 function getParams(data, idSelection){
-    let trims = trims[0]
+    let trims = data[0]
     $("#" + idSelection).parent().find(".result_api").text(model_doors + model.model_engine_power_kw)
 }
+
+let 
 // Callback eseguita dopo la richiesta dell'elenco dei modelli di un make
 function gotModels(data, make, idSelection) {
 
@@ -39,8 +41,25 @@ function gotModels(data, make, idSelection) {
             $.getJSON("https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getModel&model=" + data.Trims[0].model_id, function (data) {
                 console.log("Model", data)
                 gotModel(data, idSelection)
+                let engine = data[0].model_engine_fuel
+                let engine_position = data[0].model_engine_position
+                let weight = data[0].model_weight_kg
+                let engineMax = data[0].model_engine_power_kw
+                let transmission = data[0].model_transmission_type
+                let topSpeed = data[0].model_top_speed_kph
+                let seats = data[0].model_doors
+
+                $(".result_api1" + idSelection).parent().find(".result_api1").text(model.model_name + " by " + model.make_display + " (" + model.make_country + ")")
+                $(".result_api1").append('<p>' + "Weight:          " + weight + '</p>')
+                $(".result_api1").append('<p>' + "Seats:            "+ seats + '</p>')
+                $(".result_api1").append('<p>' + "Engine Position:  "+ engine_position + '</p>')  
+                $(".result_api1").append('<p>' + "Engine:           "+ engine + '</p>')  
+                $(".result_api1").append('<p>' + "Engine Power(kw): "+ engineMax + '</p>')
+                $(".result_api1").append('<p>' + "Transmission Type:"+ transmission + '</p>') 
+                $(".result_api1").append('<p>' + "Top Speed (Kph):  "+ topSpeed + '</p>')
+       
                 // Evento DETTAGLI IN BASE AI TRIMS
-                $.getJSON("https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getTrims&[params]") + trims + doors + engine_position + engine_type, function(data){
+                $.getJSON("https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getTrims&[params]") + engine + engine_position + weight + engineMax + transmission + topSpeed + seats, function(data){
                     console.log("parametri", data)
                     getParams(data, idSelection)
                 }
