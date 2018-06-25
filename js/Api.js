@@ -58,6 +58,9 @@ function gotModels(data, make, idSelection) {
                 $(".result_api1").append('<p>' + "Transmission Type:"+ transmission + '</p>') 
                 $(".result_api1").append('<p>' + "Top Speed (Kph):  "+ topSpeed + '</p>')
        
+                
+
+
                 // Evento DETTAGLI IN BASE AI TRIMS
                 $.getJSON("https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getTrims&[params]") + engine + engine_position + weight + engineMax + transmission + topSpeed + seats, function(data){
                     console.log("parametri", data)
@@ -70,7 +73,7 @@ function gotModels(data, make, idSelection) {
 
 }
 
-function gotMakes(data) {
+    function gotMakes(data) {
 
     let allMakes = data.Makes,
         countries = allMakes
@@ -113,6 +116,7 @@ function gotMakes(data) {
             $.getJSON("https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getModels&make=" + make, function (data) {
                 console.log("Models by", make, data)
                 gotModels(data, make, idSelection)
+
             })
             event.preventDefault(); //non far risalire la pagina
         })
