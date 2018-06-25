@@ -14,7 +14,10 @@ function gotModel(data, idSelection) {
     let model = data[0]
     $("#" + idSelection).parent().find(".model-container").text(model.model_name + " by " + model.make_display + " (" + model.make_country + ")")
 }
-
+function getParams(data, idSelection){
+    let trims = trims[0]
+    $("#" + idSelection).parent().find(".result_api").text(model_doors + model.model_engine_power_kw)
+}
 // Callback eseguita dopo la richiesta dell'elenco dei modelli di un make
 function gotModels(data, make, idSelection) {
 
@@ -36,6 +39,11 @@ function gotModels(data, make, idSelection) {
             $.getJSON("https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getModel&model=" + data.Trims[0].model_id, function (data) {
                 console.log("Model", data)
                 gotModel(data, idSelection)
+                // Evento DETTAGLI IN BASE AI TRIMS
+                $.getJSON("https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getTrims&[params]") + trims + doors + engine_position + engine_type, function(data){
+                    console.log("parametri", data)
+                    getParams(data, idSelection)
+                }
             })
         })
         event.preventDefault(); //non far risalire la pagina
