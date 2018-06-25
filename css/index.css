@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    background-color: #2a3132;
 }
 .hero-image {
     background-image: url("../src/img/traffic.jpeg");
@@ -17,7 +18,7 @@ html, body {
     position: absolute;
     text-align: center;
     font-weight: lighter;
-    color: white;
+    color:  #F8F5F2;
     outline: 0;
     top: 50%;
     left: 50%;
@@ -25,10 +26,19 @@ html, body {
 }
 
 .contenuto {
-    margin: 25px 5px 25px 5px;
+    /* margin: 25px 5px 5px 5px; */
     padding: 50px 0px 50px 0px;
 }
 
+.contenuto_border{
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: #F8F5F2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.spazi{
+    margin-top: 50px;
+}
 .selector-style {
     margin: 5px 5px 5px 5px;
     padding: 5px 5px 5px 5px;
@@ -38,10 +48,9 @@ html, body {
 }
 
 
-.btn_grp_style{
-    justify-content: center;
-    padding: 20px 20px 20px 20px;
-    margin-top: 75px;
+.btn_style:hover{
+    background-color: #EDB83D;
+    color: #F8F5F2;
 }
 
 hidediv{
@@ -51,6 +60,9 @@ hidediv{
 .margin_txt{
     margin: 25px 25px 25px 25px;
     padding: 5px 5px 5px 5px;
-
+    color: #2a3132;
 }
 
+.model-container{
+    color: #F8F5F2;
+}

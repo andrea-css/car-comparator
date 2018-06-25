@@ -2,108 +2,116 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rent Car</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <!--API-->
-    <script type="text/javascript" src="js/Api.js"></script>
-    <!--BOOTSTRAP-->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-    <!--CSS-->
-    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/scroll.css" />
-    <!--JS-->
-    <script type="text/javascript" src="js/scroll.js"></script>
-    <!--FONT-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Rent Car</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<!--API-->
+<script type="text/javascript" src="js/Api.js"></script>
+<!--BOOTSTRAP-->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+<!--CSS-->
+<link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/scroll.css" />
+<!--JS-->
+<script type="text/javascript" src="js/scroll.js"></script>
+<!--FONT-->
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
-    <!--HEROBANNER-->
-    <div class="hero-image container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-6 hero-text mx-auto">
-                <p>Più di 155 Veicoli da comparare</p>
-                <h1 style="font-size:50px">Qual'è il più adatto a te ?</h1>
-            </div>
+<!--HEROBANNER-->
+<div class="hero-image container-fluid col-12">
+    <div class="row">
+        <div class="col-12 col-md-6 hero-text mx-auto">
+            <p>Più di 155 Veicoli da comparare</p>
+            <h1 style="font-size:50px">Qual'è il più adatto a te ?</h1>
         </div>
-        <div class="row">
-            <section id="section10" class="demo justify-content-centermx-auto">
-                <a href="#contenuto">
-                    <span></span>Scroll</a>
-            </section>
+    </div>
+    <div class="row">
+        <section id="section10" class="demo justify-content-centermx-auto">
+            <a href="#contenuto">
+                <span></span>Scroll</a>
+        </section>
+    </div>
+</div>
+
+<!--CONTAINER-->
+<div class="container contenuto" id="contenuto">
+<div class="contenuto_border">
+<div class="row">
+    <h2 class="mx-auto margin_txt">Come Funziona ?</h2>
+</div>
+<div class="row">
+    <p class="text-center margin_txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae quo aliquid id molestias provident quia architecto
+        ullam pariatur, fuga libero a quasi cumque dignissimos adipisci totam soluta minus incidunt in?</p>
+</div>
+</div>
+
+
+<div class="row spazi">
+<div class="col-12 text-center">
+    <div class="btn-group dropdown-group" role="group" id="primary-selection">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-secondary dropdown-toggle btn_style" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Countries
+            </button>
+            <div class="dropdown-menu countries-menu"></div>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-secondary dropdown-toggle btn_style" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Makes
+            </button>
+            <div class="dropdown-menu makes-menu"></div>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-secondary dropdown-toggle btn_style" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Models
+            </button>
+            <div class="dropdown-menu models-menu"></div>
         </div>
     </div>
 
-    <!--CONTAINER-->
-    <div class="container-fluid contenuto" id="contenuto">
-        <div class="row">
-            <h2 class="mx-auto margin_txt">Come Funziona ?</h2>
+<div class="model-container"></div>
+</div>
+<br><br>
+<div class="col-12 text-center">
+    <div class="btn-group dropdown-group" role="group" id="secondary-selection">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-secondary dropdown-toggle btn_style" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Countries
+            </button>
+            <div class="dropdown-menu countries-menu"></div>
         </div>
-        <div class="row">
-            <p class="text-center margin_txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae quo aliquid id molestias provident quia architecto
-                ullam pariatur, fuga libero a quasi cumque dignissimos adipisci totam soluta minus incidunt in?</p>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-secondary dropdown-toggle btn_style" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Makes
+            </button>
+            <div class="dropdown-menu makes-menu"></div>
         </div>
-        <div class="row align-items-center">
-
-            <div class="col-6 text-center">
-
-                <div class="btn-group" role="group" id="primary-selection">
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Countries
-                        </button>
-                        <div class="dropdown-menu countries-menu"></div>
-                    </div>
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Makes
-                        </button>
-                        <div class="dropdown-menu makes-menu"></div>
-                    </div>
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Models
-                        </button>
-                        <div class="dropdown-menu models-menu"></div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-6 text-center">
-
-                <div class="btn-group" role="group" id="secondary-selection">
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Countries
-                        </button>
-                        <div class="dropdown-menu countries-menu"></div>
-                    </div>
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Makes
-                        </button>
-                        <div class="dropdown-menu makes-menu"></div>
-                    </div>
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Models
-                        </button>
-                        <div class="dropdown-menu models-menu"></div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-secondary dropdown-toggle btn_style" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Models
+            </button>
+            <div class="dropdown-menu models-menu"></div>
         </div>
     </div>
+
+    <div class="model-container"></div>
+
+</div>
+</div>
+<div class="row">
+    <div class="col-6 text-center result_api1"></div>
+    <div class="col-6 text-center result_api2"></div>
+</div>
+</div>
 </body>
 
 </html>
