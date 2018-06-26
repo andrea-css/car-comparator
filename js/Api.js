@@ -11,15 +11,34 @@ console.log("CHIAMATA PARTITA")
 
 // Callback eseguita dopo la richiesta dei dati di un singolo modello
 function gotModel(data, idSelection) {
-    let model = data[0]
-    $("#" + idSelection).parent().find(".model-container").text(model.model_name + " by " + model.make_display + " (" + model.make_country + ")")
-}
-function getParams(data, idSelection){
-    let trims = data[0]
-    $("#" + idSelection).parent().find(".result_api").text(model_doors + model.model_engine_power_kw)
+
+    let model = data[0],
+        modelContainer = $("#" + idSelection).parent().find(".model-container").empty();
+
+    let engine = data[0].model_engine_fuel
+    let engine_position = data[0].model_engine_position
+    let weight = data[0].model_weight_kg
+    let engineMax = data[0].model_engine_power_kw
+    let transmission = data[0].model_transmission_type
+    let topSpeed = data[0].model_top_speed_kph
+    let seats = data[0].model_doors
+
+    modelContainer.append("<p>" + model.model_name + " by " + model.make_display + " (" + model.make_country + ")</p>")
+    modelContainer.append('<p>' + "Weight:          " + weight + '</p>')
+    modelContainer.append('<p>' + "Seats:            " + seats + '</p>')
+    modelContainer.append('<p>' + "Engine Position:  " + engine_position + '</p>')
+    modelContainer.append('<p>' + "Engine:           " + engine + '</p>')
+    modelContainer.append('<p>' + "Engine Power(kw): " + engineMax + '</p>')
+    modelContainer.append('<p>' + "Transmission Type:" + transmission + '</p>')
+    modelContainer.append('<p>' + "Top Speed (Kph):  " + topSpeed + '</p>')
+
 }
 
-let 
+/*function getParams(data, idSelection){
+    let trims = data[0]
+    $("#" + idSelection).parent().find(".result_api").text(model_doors + model.model_engine_power_kw)
+}*/
+
 // Callback eseguita dopo la richiesta dell'elenco dei modelli di un make
 function gotModels(data, make, idSelection) {
 
@@ -41,6 +60,7 @@ function gotModels(data, make, idSelection) {
             $.getJSON("https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getModel&model=" + data.Trims[0].model_id, function (data) {
                 console.log("Model", data)
                 gotModel(data, idSelection)
+<<<<<<< HEAD
                 let engine = data[0].model_engine_fuel
                 let engine_position = data[0].model_engine_position
                 let weight = data[0].model_weight_kg
@@ -61,9 +81,14 @@ function gotModels(data, make, idSelection) {
 
                 // Evento DETTAGLI IN BASE AI TRIMS
                 $.getJSON("https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getTrims&[params]") + engine + engine_position + weight + engineMax + transmission + topSpeed + seats, function(data){
+=======
+
+                // Evento DETTAGLI IN BASE AI TRIMS - A cosa dovrebbe servire? Romai in data hai già tutti i dettagli...
+                /*$.getJSON("https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getTrims&[params]") + engine + engine_position + weight + engineMax + transmission + topSpeed + seats, function(data){
+>>>>>>> 96ba653113af542da3a4536ce4b2c6d3d03031e2
                     console.log("parametri", data)
                     getParams(data, idSelection)
-                }
+                }*/
             })
         })
         event.preventDefault(); //non far risalire la pagina
@@ -71,7 +96,7 @@ function gotModels(data, make, idSelection) {
 
 }
 
-    function gotMakes(data) {
+function gotMakes(data) {
 
     let allMakes = data.Makes,
         countries = allMakes
@@ -124,7 +149,7 @@ function gotModels(data, make, idSelection) {
     })
 
 
-// TABALLA DATI AUTO
+    // TABALLA DATI AUTO
 
     // event onchange
     // let selectedCountry = ...
