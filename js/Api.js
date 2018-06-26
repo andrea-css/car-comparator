@@ -49,16 +49,14 @@ function gotModels(data, make, idSelection) {
                 let topSpeed = data[0].model_top_speed_kph
                 let seats = data[0].model_doors
 
-                $(".result_api1" + idSelection).parent().find(".result_api1").text(model.model_name + " by " + model.make_display + " (" + model.make_country + ")")
-                $(".result_api1").append('<p>' + "Weight:          " + weight + '</p>')
-                $(".result_api1").append('<p>' + "Seats:            "+ seats + '</p>')
-                $(".result_api1").append('<p>' + "Engine Position:  "+ engine_position + '</p>')  
-                $(".result_api1").append('<p>' + "Engine:           "+ engine + '</p>')  
-                $(".result_api1").append('<p>' + "Engine Power(kw): "+ engineMax + '</p>')
-                $(".result_api1").append('<p>' + "Transmission Type:"+ transmission + '</p>') 
-                $(".result_api1").append('<p>' + "Top Speed (Kph):  "+ topSpeed + '</p>')
-       
-                
+                $(".result_api1, .result_api2" + idSelection).parent().find(".result_api1, .result_api2").text(model.model_name + " by " + model.make_display + " (" + model.make_country + ")")
+                $(".result_api1, .result_api2").append('<p>' + "Weight:          " + weight + '</p>')
+                $(".result_api1, .result_api2").append('<p>' + "Seats:            "+ seats + '</p>')
+                $(".result_api1, .result_api2").append('<p>' + "Engine Position:  "+ engine_position + '</p>')  
+                $(".result_api1, .result_api2").append('<p>' + "Engine:           "+ engine + '</p>')  
+                $(".result_api1, .result_api2").append('<p>' + "Engine Power(kw): "+ engineMax + '</p>')
+                $(".result_api1, .result_api2").append('<p>' + "Transmission Type:"+ transmission + '</p>') 
+                $(".result_api1, .result_api2").append('<p>' + "Top Speed (Kph):  "+ topSpeed + '</p>')
 
 
                 // Evento DETTAGLI IN BASE AI TRIMS
@@ -117,6 +115,7 @@ function gotModels(data, make, idSelection) {
                 console.log("Models by", make, data)
                 gotModels(data, make, idSelection)
 
+                
             })
             event.preventDefault(); //non far risalire la pagina
         })
