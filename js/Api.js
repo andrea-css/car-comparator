@@ -60,7 +60,6 @@ function gotModels(data, make, idSelection) {
             $.getJSON("https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getModel&model=" + data.Trims[0].model_id, function (data) {
                 console.log("Model", data)
                 gotModel(data, idSelection)
-<<<<<<< HEAD
                 let engine = data[0].model_engine_fuel
                 let engine_position = data[0].model_engine_position
                 let weight = data[0].model_weight_kg
@@ -81,14 +80,9 @@ function gotModels(data, make, idSelection) {
 
                 // Evento DETTAGLI IN BASE AI TRIMS
                 $.getJSON("https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getTrims&[params]") + engine + engine_position + weight + engineMax + transmission + topSpeed + seats, function(data){
-=======
-
-                // Evento DETTAGLI IN BASE AI TRIMS - A cosa dovrebbe servire? Romai in data hai già tutti i dettagli...
-                /*$.getJSON("https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getTrims&[params]") + engine + engine_position + weight + engineMax + transmission + topSpeed + seats, function(data){
->>>>>>> 96ba653113af542da3a4536ce4b2c6d3d03031e2
                     console.log("parametri", data)
                     getParams(data, idSelection)
-                }*/
+                }
             })
         })
         event.preventDefault(); //non far risalire la pagina
